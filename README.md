@@ -44,7 +44,7 @@ start = time.time()
 ```
 
 ### 3. While loop
-Constant check timmer if it has reached 10s.  If reached break.  If not continue...
+Constant check timmer if it has reached 10s.  If reached break.  If not continue running `is_prime()` funcction.
 ```py
 while True:
     current = time.time();
