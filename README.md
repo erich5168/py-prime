@@ -21,9 +21,9 @@ elapsed = current - start
 
 print('Time completed: ' , elapsed)
 ```
-- `start.time()` inside `range()` because this is when you start your checks.  There is a logic problem with your old code, your `start.time()` starts at the very begining of your program, you are not accounting the time user needs to input interval.
+- `start.time()` inside `range()` because this is when you start your checks.  There is a logic problem with your old code. Your `start.time()` starts at the very begining of your program, you are not accounting the time user needs to input interval.
 - `time.sleep(.01)` on my machine it happens so fast at the end of the program it shows 0.0s.  This is to add a little delay between each number.
-- At the very end after the `for` loop is complete we calculate the time spent.
+- At the very end after the `for()` loop is complete we calculate the time spent.
 
 
 ## primeNum.py - Prime number within 10s
@@ -38,7 +38,7 @@ def is_prime(n):
 ```
 
 ### 2. Start time
-We start time outside of `is_prime()` because we don't have to worry about user input time
+We start time outside of `is_prime()` because we don't have to worry about time user need to input interval.
 ```py
 start = time.time()
 ```
