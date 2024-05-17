@@ -2,10 +2,31 @@
 Prime number within 10s
 
 ## prime-alpha.py -  original code
-Did not change anything only fixed a bug. 
+- fixed a bug
+- implement timer: display final
+
+```py
+for n in range(first_int, final_int + 1):
+    start = time.time() 
+    time.sleep(.01)  # simulate some work is being done
+    if n > 1:
+        for x in range(2, n):
+            if n % x == 0:
+                break
+        else:
+            print(n)
+
+current = time.time()
+elapsed = current - start
+
+print('Time completed: ' , elapsed)
+```
+- `start.time()` inside `range()` because this is when you start your checks.  If you review your old code, your `start.time()` starts at the very begining of your code, which means it begins as soon as you start your program.
+- `time.sleep(.01)` on my machine it happens so fast at the end of the program it shows 0.0s.  This is to add a little delay between each number.
+- At the very end after the `for` loop is complete we calculate the time spent.
 
 
-## primeNum.py - Prime number withint 10s
+## primeNum.py - Prime number within 10s
 
 ### 1. Function that check for prim numbers
 ```py
@@ -38,7 +59,7 @@ while True:
 ## Final Thoughts
 
 **prime-alpha.py (original code)**
-Not sure what the inputs `frist_int` & `final_int` was for related to your question "Prime number within 10s".  So I wasn't able to integrated it with primeNum.py.
+Not sure what the inputs `frist_int` & `final_int` was in relations to your question "Prime number within 10s".  So I wasn't able to integrated it with primeNum.py.
 
 **primeNum.py**
 Something is bugging me about `is_prime()` function.  Could there be ways to make the computer output more numbers? Given limited of time I couldn't explore to much but a few thoughts maybe you could try...
