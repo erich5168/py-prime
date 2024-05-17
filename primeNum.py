@@ -8,5 +8,12 @@ def is_prime(n):
             return False
     return True
 
+# N has to start with 2.  2 is the only even prim number
+n = 2 
+
+# Start time
 start = time.time()
-print(start)
+
+# While loop through time
+
+while True:
