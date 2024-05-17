@@ -22,6 +22,8 @@ while True:
 
     if elapsed >= 10:
         break
-    print(elapsed)
-
+    if is_prime(n):
+        print(n)
+    n += 1
+    
 print("10 seconds is up.")
