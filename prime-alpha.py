@@ -2,12 +2,11 @@
 import time
 
 # variables
-start = time.time() # start timer
+# start = time.time() # start timer
 
 # wait a few seconds
-
-current = time.time() # get time again
-elapsed = round(float(current - start), 6)  # measure elapsed time  
+# current = time.time() # get time again
+# elapsed = round(float(current - start), 6)  # measure elapsed time  
 
 first_int = int(input("Enter first interval: "))
 final_int = int(input("Enter final interval: "))
@@ -35,12 +34,19 @@ final_int = int(input("Enter final interval: "))
 # 9
 
 for n in range(first_int, final_int + 1):
+    start = time.time() 
+    time.sleep(.01)  # simulate some work is being done
     if n > 1:
         for x in range(2, n):
             if n % x == 0:
                 break
         else:
             print(n)
+
+current = time.time()
+elapsed = current - start
+
+print('Time completed: ' , elapsed)
 
 # Result:
 # Enter first interval: 1
