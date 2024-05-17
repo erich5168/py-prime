@@ -17,3 +17,11 @@ start = time.time()
 # While loop through time
 
 while True:
+    current = time.time();
+    elapsed = current - start
+
+    if elapsed >= 10:
+        break
+    print(elapsed)
+
+print("10 seconds is up.")
